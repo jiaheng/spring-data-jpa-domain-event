@@ -18,10 +18,10 @@ public class MyClassService {
     @Transactional
     public void updateFirst5() {
         Window<MyClass> myClasses = myClassRepository.findFirst5By(ScrollPosition.keyset());
-            for (MyClass myClass : myClasses) {
-                myClass.setField("updated");
-            }
-            myClassRepository.saveAll(myClasses);
+        for (MyClass myClass : myClasses) {
+            myClass.setField("updated");
+        }
+        myClassRepository.saveAll(myClasses);
     }
 
     @Transactional

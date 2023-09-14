@@ -88,7 +88,7 @@ class DomainEventHandlerTest {
             for (MyClass myClass : myClasses) {
                 myClass.setField("updated");
             }
-            myClassRepository.saveAll(myClasses.toList()); // change myClasses.toList() to myClasses will pass
+            myClassRepository.saveAll(myClasses); // change myClasses to myClasses.toList() will pass
         }
     }
 
